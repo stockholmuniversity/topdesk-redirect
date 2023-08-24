@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "topdesk-redirect"
+version = "0.1.0"
+description = "Redirect ticket numbers to the ticket in TOPdesk"
+authors = ["Simon Lundström <simlu+github@su.se>"]
+license = "BSD-3-Clause"
+
+[tool.poetry.dependencies]
+python = "^3.7.9"
+requests = "^2.31.0"
+Flask = "^2.2"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.17.4"
+black = "^23.3.0"
+python-lsp-server = "^1.7.3"
+isort = "^5.11"
+
+[tool.pylint]
+    [tool.pylint.master]
+    disable= [
+        'missing-docstring',
+        'consider-using-f-string',
+        'W',
+        ]
+
+    output-format = 'parseable'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
